@@ -1,0 +1,23 @@
+{
+  "name": "node-reminder-app-v2",
+  "version": "1.0.0",
+  "description": "Improved version of the previous reminder app which will store data in MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adriana2288/node-reminder-app-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adriana2288/node-reminder-app-v2/issues"
+  },
+  "homepage": "https://github.com/Adriana2288/node-reminder-app-v2#readme",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
