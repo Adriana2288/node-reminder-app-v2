@@ -1,17 +1,10 @@
-const yargs = require("yargs")
-const { addNotes, listNotes, removeNotes } = require("../utils/notes")
+const figlet = require("figlet")
+const chalk = require("chalk")
+const { app } = require("../utils/questions")
 
-const command = process.argv[2]
-
-if (command === "add") {
-    console.log("adding a note")
-    addNotes(yargs.argv.note)
-} else if (command == "remove") {
-    console.log("removing note")
-    removeNotes(yargs.argv.note)
-} else if (command == "list") {
-    console.log("listing all notes")
-    listNotes(yargs.argv.note)
-} else {
-    console.log("command not recognised")
+const welcomeGreeting = () => {
+    console.log(chalk.redBright(figlet.textSync("Welcome")))
+    app()
 }
+
+welcomeGreeting()

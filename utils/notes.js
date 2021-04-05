@@ -23,19 +23,22 @@ const saveNotes = (allNotes) => {
 
 const listNotes = () => {
     const allNotes = loadNotes()
-    allNotes.map(note => {
-        console.log(note)
+    allNotes.map((note, index) => {
+        console.log(`${index + 1}: ${note.reminder}`)
     })
 }
 
 const removeNotes = (noteToDelete) => {
     const allNotes = loadNotes()
 
-    const notesToKeep = allNotes.filter(note => {
-        return note.reminder != noteToDelete
-    })
+    try {
+        const removedNote = allNotes.splice(noteToDelete - 1, 1)
+        console.log(`Successfuly removed ${removedNote[0].reminder}`) 
+    } catch (error) {
+        console.log("The number is not valid. Please try again")
+    }
 
-    saveNotes(notesToKeep)
+    saveNotes(allNotes)
 }
 
 module.exports = {
